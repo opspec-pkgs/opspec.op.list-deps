@@ -27,6 +27,11 @@ opctl run github.com/opspec-pkgs/opspec.op.refs.list#1.0.0
 ```yaml
 op:
   pkg: { ref: github.com/opspec-pkgs/opspec.op.refs.list#1.0.0 }
+  inputs:
+    # params w/ default
+    opDotYml:
+  outputs:
+    refs:
 ```
 
 # Support

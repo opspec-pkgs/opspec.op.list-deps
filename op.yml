@@ -16,14 +16,10 @@ outputs:
             type: {}
 version: 1.0.0
 run:
-  serial:
-    - container:
-        image: { ref: 'opspecpkgs/opspec.op.refs.list:1.0.0' }
-        cmd: [node, /cmd.js]
-        files:
-          /cmd.js:
-          /op.yml: $(opDotYml)
-          /refs: $(refs)
-    - container:
-        image: { ref: 'alpine' }
-        cmd: [echo, $(refs)]
+  container:
+    image: { ref: 'opspecpkgs/opspec.op.refs.list:1.0.0' }
+    cmd: [node, /cmd.js]
+    files:
+      /cmd.js:
+      /op.yml: $(opDotYml)
+      /refs: $(refs)

@@ -1,5 +1,5 @@
 name: github.com/opspec-pkgs/opspec.op.list-deps
-description: lists dependencies (containers &/or ops) of an op
+description: lists dependencies (containers &/or ops) of an [opspec](https://opspec.io) op
 inputs:
   opDotYml:
     file:

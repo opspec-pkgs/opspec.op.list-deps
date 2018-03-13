@@ -2,7 +2,7 @@
 
 # Problem statement
 
-lists dependencies (containers &/or ops) of an op
+lists dependencies (containers &/or ops) of an [opspec](https://opspec.io) op
 
 # Format
 

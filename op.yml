@@ -1,25 +1,25 @@
-name: github.com/opspec-pkgs/opspec.op.refs.list
-description: lists ops &/or containers, referenced by (a.k.a. dependencies of) an op
+name: github.com/opspec-pkgs/opspec.op.list-deps
+description: lists dependencies (containers &/or ops) of an op
 inputs:
   opDotYml:
     file:
       description: '`op.yml` of op to list refs from'
       default: op.yml
 outputs:
-  refs:
+  deps:
     array:
-      description: lists type (op/container) & ref
+      description: lists ref & path (ends in container or op) of each dependency
       constraints:
         items:
           properties:
             ref: {}
-            type: {}
+            path: {}
 version: 1.0.0
 run:
   container:
-    image: { ref: 'opspecpkgs/opspec.op.refs.list:1.0.0' }
+    image: { ref: 'opspecpkgs/opspec.op.list-deps:1.0.0' }
     cmd: [node, /cmd.js]
     files:
       /cmd.js:
       /op.yml: $(opDotYml)
-      /refs: $(refs)
+      /deps: $(deps)

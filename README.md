@@ -1,5 +1,7 @@
 [![Build Status](https://travis-ci.org/opspec-pkgs/opspec.op.list-deps.svg?branch=master)](https://travis-ci.org/opspec-pkgs/opspec.op.list-deps)
 
+<img src="icon.svg" alt="icon" height="100px">
+
 # Problem statement
 
 lists dependencies (containers &/or ops) of an [opspec](https://opspec.io) op
